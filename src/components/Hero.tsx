@@ -2,8 +2,13 @@ import React from 'react';
 import { Code, Sparkles } from 'lucide-react';
 import { ParticlesBackground } from './ParticlesBackground';
 import { GradientText } from './GradientText';
+import { Container } from './Container';
+import { Button } from './Button';
+import { useNavigate } from 'react-router-dom';
 
 export function Hero() {
+  const navigate = useNavigate();
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient background */}
@@ -20,37 +25,46 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="flex justify-center items-center mb-8">
-          <div className="relative">
-            <Code className="w-12 h-12 text-blue-400" />
-            <Sparkles className="absolute -top-2 -right-2 w-6 h-6 text-yellow-400 animate-pulse" />
+      <Container className="relative z-10">
+        <div className="text-center">
+          <div className="flex justify-center items-center mb-6">
+            <div className="relative">
+              <Code className="w-10 h-10 text-blue-400" />
+              <Sparkles className="absolute -top-1 -right-1 w-5 h-5 text-yellow-400 animate-pulse" />
+            </div>
+          </div>
+          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">
+            <GradientText>HASITHA</GradientText>
+          </h1>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+            <GradientText>SANDAKELUM</GradientText>
+          </h2>
+          
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Full-Stack Developer & Digital Craftsman
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
+            <Button 
+              size="sm"
+              onClick={() => navigate('/projects')}
+            >
+              View My Work
+            </Button>
+            <Button 
+              size="sm"
+              variant="secondary"
+              onClick={() => navigate('/contact')}
+            >
+              Let's Connect
+              <span className="inline-block transition-transform group-hover:translate-x-1 ml-2">
+                →
+              </span>
+            </Button>
           </div>
         </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-          <GradientText>HASITHA</GradientText>
-        </h1>
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-          <GradientText>SANDAKELUM</GradientText>
-        </h2>
-        
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-          Full-Stack Developer & Digital Craftsman
-        </p>
-        
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto">
-            View My Work
-          </button>
-          <button className="group px-8 py-3 bg-transparent border border-blue-400/30 hover:border-blue-400 text-blue-400 hover:text-white rounded-lg transition-all duration-300 hover:bg-blue-400/10 w-full sm:w-auto">
-            Let's Connect
-            <span className="inline-block transition-transform group-hover:translate-x-1 ml-2">
-              →
-            </span>
-          </button>
-        </div>
-      </div>
+      </Container>
     </div>
   );
 }

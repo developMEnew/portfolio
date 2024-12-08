@@ -1,5 +1,9 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
+import { AnimatedContainer } from '../components/AnimatedContainer';
+import { AnimatedCard } from '../components/AnimatedCard';
+import { motion } from 'framer-motion';
+import { slideIn } from '../utils/animations';
 
 export function Projects() {
   return (
@@ -10,14 +14,19 @@ export function Projects() {
         keywords="web development projects, software portfolio, React projects, full-stack applications"
       />
       <main className="pt-16 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold mb-8">
+        <AnimatedContainer className="py-12">
+          <motion.h1 
+            className="text-4xl font-bold mb-8"
+            variants={slideIn}
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               Projects
             </span>
-          </h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
+          </motion.h1>
+          <AnimatedCard delay={0.2}>
+            <p className="text-gray-300">Coming soon...</p>
+          </AnimatedCard>
+        </AnimatedContainer>
       </main>
     </>
   );
