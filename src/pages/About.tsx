@@ -15,10 +15,7 @@ export function About() {
       />
       <main className="pt-16 min-h-screen">
         <AnimatedContainer className="py-12">
-          <motion.h1 
-            className="text-4xl font-bold mb-8"
-            variants={slideIn}
-          >
+          <motion.h1 className="text-4xl font-bold mb-8" variants={slideIn}>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               About Me
             </span>
@@ -29,13 +26,18 @@ export function About() {
             <div className="flex items-start gap-4">
               <Code className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" />
               <div>
-                <h2 className="text-xl font-semibold mb-4 text-white">Who I Am</h2>
+                <h2 className="text-xl font-semibold mb-4 text-white">
+                  Who I Am
+                </h2>
                 <p className="text-gray-300 leading-relaxed">
-                  I'm a passionate Freelancer specializing in Game Design, Web Development,
-                  and React. I love creating dynamic, user-focused digital experiences
-                  that blend functionality with visual appeal. With a strong foundation
-                  in both creative design and technical implementation, I transform
-                  ideas into engaging solutions through clean code and innovative thinking.
+                  I'm an enthusiastic learner diving into Game Design, Web
+                  Development, and React. I’m passionate about exploring the
+                  balance between functionality and aesthetics, aiming to create
+                  dynamic, user-focused digital experiences. With a curious
+                  mindset and a commitment to growth, I’m building a strong
+                  foundation in creative design and technical implementation,
+                  constantly transforming ideas into engaging solutions as I
+                  learn and evolve.
                 </p>
               </div>
             </div>
@@ -48,7 +50,9 @@ export function About() {
               <div className="flex items-start gap-4">
                 <Briefcase className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-xl font-semibold mb-4 text-white">Experience</h2>
+                  <h2 className="text-xl font-semibold mb-4 text-white">
+                    Experience
+                  </h2>
                   <ul className="space-y-4">
                     <li>
                       <h3 className="text-blue-400 font-medium">.</h3>
@@ -64,7 +68,9 @@ export function About() {
               <div className="flex items-start gap-4">
                 <GraduationCap className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-xl font-semibold mb-4 text-white">Education</h2>
+                  <h2 className="text-xl font-semibold mb-4 text-white">
+                    Education
+                  </h2>
                   <ul className="space-y-4">
                     <li>
                       <h3 className="text-blue-400 font-medium">.</h3>
