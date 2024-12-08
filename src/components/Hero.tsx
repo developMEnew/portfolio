@@ -41,8 +41,8 @@ export function Hero() {
             <GradientText>SANDAKELUM</GradientText>
           </h2>
           
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Full-Stack Developer & Digital Craftsman
+          <p className="text-base sm:text-lg md:text-sm text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Learning and growing to craft impactful digital experiences
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
